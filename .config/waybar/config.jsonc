@@ -1,6 +1,7 @@
 {
   "reload_style_on_change": true,
   "font": "JetBrainsMono Nerd Font 10",
+  "spacing": 8,
   // ----------
   // modules available
   "modules-left": [
