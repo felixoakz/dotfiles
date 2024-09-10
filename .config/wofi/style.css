@@ -1,0 +1,40 @@
+window {
+    margin: 0px;
+    border: 1px solid #1f1f1f; /* Subtle border */
+    background-color: #0f0f0f; /* Background */
+    border-radius: 5px; /* Slight rounding for a clean look */
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #f0f0f0; /* Almost white text */
+    background-color: #1f1f1f; /* Darker input field background */
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #1f1f1f; /* Matches input for consistency */
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #0f0f0f; /* Match the window background */
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #f0f0f0; /* Text matches the foreground */
+}
+
+#entry:selected {
+    background-color: #3f3fff; /* Vivid blue for selection */
+}

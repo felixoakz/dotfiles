@@ -1,0 +1,42 @@
+{
+  "reload_style_on_change": true,
+  "font": "JetBrainsMono Nerd Font 10",
+  // ----------
+  // modules available
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "custom/media",
+    "group/hardware",
+    "tray",
+    "network",
+    "bluetooth",
+    "group/config",
+    "clock",
+    "custom/powermenu"
+  ],
+  // ----------
+  //group hardware
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature"
+    ]
+  },
+  "group/config": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "backlight"
+    ]
+  },
+  // ----------
+  // include modules config
+  "include": [
+    "~/dotfiles/.config/waybar/modules.jsonc"
+  ]
+}

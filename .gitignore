@@ -2,9 +2,6 @@
 # Ignore SSH keys
 .ssh/
 
-# Ignore configuration files
-.config/
-
 # Ignore cache directories
 .cache/
 

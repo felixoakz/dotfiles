@@ -1,0 +1,113 @@
+* {
+    border-radius: 5px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+    color: #B5C5CF; /* Text color */
+}
+
+window#waybar {
+    color: #fff;
+    background: transparent;
+}
+
+tooltip {
+    background: #1f1f1f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #3f3fff;
+}
+
+/* Workspace Buttons */
+#workspaces button {
+    padding: 5px;
+    color: #c5c5c5; /* Lighter gray */
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #FFFFFF; /* White when active */
+}
+
+#workspaces button.focused {
+    color: #FFFFFF;
+    background: #3f3fff; /* Blue for focused workspace */
+}
+
+#workspaces button.urgent {
+    color: #0f0f0f;
+    background: #ff5252; /* Red for urgent workspaces */
+}
+
+#workspaces button:hover {
+    background: #3f3fff; /* Hover state */
+    color: #FFFFFF;
+}
+
+/* Modules */
+#custom-media,
+#custom-powermenu,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#temperature,
+#backlight {
+    margin-top: 10px;
+    padding: 0px 12px;
+}
+
+/* Specific Module Styles */
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#custom-media {
+    margin-right: 8px;
+}
+
+#pulseaudio {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#backlight {
+    margin-right: 8px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+#network {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#bluetooth {
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 8px;
+}
+
+#cpu {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#memory {
+    border-radius: 0px;
+}
+
+#temperature {
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 8px;
+}
+
+#clock {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#custom-powermenu {
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 10px;
+}
