@@ -106,6 +106,7 @@ system_packages=(
   "ranger"                          # Console-based file manager with VI key bindings
   "python-pillow"                   # Python Imaging Library (Pillow)
   "xdg-desktop-portal-hyprland-git" # Hyprland-specific implementation of xdg-desktop-portal
+  "insomnia"
 )
 
 # List of workspace packages to install

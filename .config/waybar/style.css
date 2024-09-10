@@ -47,7 +47,6 @@ tooltip {
 /* Modules */
 #custom-media,
 #custom-powermenu,
-#clock,
 #pulseaudio,
 #network,
 #bluetooth,
@@ -66,7 +65,6 @@ tooltip {
 /* Hover effect */
 #custom-media:hover,
 #custom-powermenu:hover,
-#clock:hover,
 #pulseaudio:hover,
 #network:hover,
 #bluetooth:hover,
