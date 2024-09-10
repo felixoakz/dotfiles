@@ -78,6 +78,7 @@ system_packages=(
   "noto-fonts"                # Google Noto fonts
   "ttf-hack"                  # Hack programming font
   "ttf-material-design-icons" # Material Design icons font
+  "ttf-font-awesome"
 
   # Networking
   "networkmanager"       # Tool for managing network connections
