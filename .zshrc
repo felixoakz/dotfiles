@@ -99,5 +99,6 @@ alias count='ls -1 | wc -l'
 
 # Workspaces
 alias gouveia='cd ~/workspace/sistema-gouveia && tmux new -s gouveia'
+alias nweb='cd ~/workspace/consigweb/ && tmux new -s netinove_web'
 
 source /usr/share/nvm/init-nvm.sh
