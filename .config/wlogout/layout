@@ -1,24 +1,24 @@
 {
-    "label" : "logout (l)",
+    "label" : "logout",
     "action" : "hyprctl dispatch exit 0",
-    "text" : "Logout",
+    "text" : "Logout (L)",
     "keybind" : "l"
 }
 {
-    "label" : "shutdown (s)",
+    "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "Shutdown",
+    "text" : "Shutdown (S)",
     "keybind" : "s"
 }
 {
-    "label" : "suspend (u)",
+    "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "Suspend",
+    "text" : "Suspend (U)",
     "keybind" : "u"
 }
 {
-    "label" : "reboot (r)",
+    "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "Reboot",
+    "text" : "Reboot (R)",
     "keybind" : "r"
 }
