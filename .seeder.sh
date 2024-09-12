@@ -81,9 +81,9 @@ system_packages=(
   "ttf-font-awesome"
 
   # Networking
-  "networkmanager"       # Tool for managing network connections
-  "nm-applet"            # Applet for NetworkManager in system tray
-  "xorg-server-xwayland" # Xorg server for X11 applications in Wayland
+  "networkmanager"         # Tool for managing network connections
+  "network-manager-applet" # Applet for NetworkManager in system tray
+  "xorg-server-xwayland"   # Xorg server for X11 applications in Wayland
 
   # Audio and video
   "pavucontrol"    # PulseAudio volume control GUI

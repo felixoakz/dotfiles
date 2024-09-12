@@ -48,11 +48,12 @@ tooltip {
 #custom-media,
 #custom-powermenu,
 #pulseaudio,
-#network,
-#bluetooth,
+/* #network, */
+/* #bluetooth, */
 #workspaces,
 #tray,
 #cpu,
+/* #clock, */
 #memory,
 #temperature,
 #backlight {
@@ -66,11 +67,12 @@ tooltip {
 #custom-media:hover,
 #custom-powermenu:hover,
 #pulseaudio:hover,
-#network:hover,
-#bluetooth:hover,
+/* #network:hover, */
+/* #bluetooth:hover, */
 #workspaces:hover,
 #tray:hover,
 #cpu:hover,
+/* #clock:hover, */
 #memory:hover,
 #temperature:hover,
 #backlight:hover {

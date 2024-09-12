@@ -11,9 +11,19 @@
       "title<.*tmux.*>": " "
     }
   },
-  "tray": {
-    "spacing": 10
+  // MEDIA
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "default": " "
+    },
+    "escape": true,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' -F",
+    "on-click": "playerctl play-pause"
   },
+  // HARDWARE
   "cpu": {
     "format": "   {usage}%",
     "tooltip": true
@@ -26,38 +36,31 @@
     "format": " {temperatureC}°C",
     "format-icons": [
       "",
-      "",
       "",
-      "",
       ""
     ]
   },
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+  //TRAY APPS
+  "tray": {
+    "spacing": 16
   },
-  "network": {
-    "format-wifi": "   {signalStrength}%",
-    "format-disconnected": "⚠ Disconnected",
-    "tooltip-format": "{ipaddr} -> {essid}",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname}"
-  },
-  "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {num_connections} connected",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-  },
+  ////NETWORK
+  //"network": {
+  //  "format-wifi": "   {signalStrength}%",
+  //  "format-disconnected": "⚠ Disconnected",
+  //  "tooltip-format": "{ipaddr} -> {essid}",
+  //  "format-ethernet": " {ipaddr}/{cidr}",
+  //  "format-linked": " {ifname}",
+  //  "on-click": "nm-connection-editor"
+  //},
+  ////BLUETOOTH
+  //"bluetooth": {
+  //  "format": " {status}",
+  //  "format-connected": " {num_connections} connected",
+  //  "tooltip-format": "{controller_alias}\t{controller_address}",
+  //  "on-click": "blueman-manager"
+  //},
+  //AUDIO
   "pulseaudio": {
     "format": "{icon}   {volume}%     {format_source}",
     "format-source": "  {volume}%",
@@ -80,20 +83,27 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "default": " "
-    },
-    "escape": true,
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' -F",
-    "on-click": "playerctl play-pause"
-  },
+  //WLOGOF
   "custom/powermenu": {
     "format": " ",
     "tooltip": false,
-    "on-click": "exec wlogout -p layer-shell"
+    "on-click": "exec wlogout -b 4 layer-shell"
   }
+  //"clock": {
+  //  "interval": 60,
+  //  "format": "{:%H:%M | %d/%m}",
+  //  "timezone": "America/New_York",
+  //  "tooltip-format": "<tt><small>{calendar}</small></tt>",
+  //  "calendar": {
+  //    "mode": "month",
+  //    "weeks-pos": "left",
+  //    "format": {
+  //      "months": "<span color='#ffead3'><b>{}</b></span>",
+  //      "days": "<span color='#ecc6d9'><b>{}</b></span>",
+  //      "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+  //      "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+  //      "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+  //    }
+  //  }
+  //}
 }

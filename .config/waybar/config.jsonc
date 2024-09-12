@@ -12,9 +12,10 @@
     "custom/media",
     "group/hardware",
     "tray",
-    "network",
-    "bluetooth",
-    "group/config",
+    //"network",
+    //"bluetooth",
+    "pulseaudio",
+    //"clock",
     "custom/powermenu"
   ],
   // ----------
@@ -27,15 +28,8 @@
       "temperature"
     ]
   },
-  "group/config": {
-    "orientation": "horizontal",
-    "modules": [
-      "pulseaudio",
-      "backlight"
-    ]
-  },
   // ----------
-  // include modules config
+  // includes modules configs
   "include": [
     "~/dotfiles/.config/waybar/modules.jsonc"
   ]
