@@ -90,15 +90,19 @@ export PATH=$PATH:/home/felixsouzaps/.local/bin
 export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 
-# Aliases
-alias hypr='Hyprland'
-alias timesh='sudo -E timeshift-launcher'
-alias activate='source venv/bin/activate'
-alias count='ls -1 | wc -l'
-# alias copy='cat $2 | xclip -selection clipboard'
-
-# Workspaces
-alias gouveia='cd ~/workspace/sistema-gouveia && tmux new -s gouveia'
-alias nweb='cd ~/workspace/consigweb/ && tmux new -s netinove_web'
+export PATH="$HOME/.local/bin":$PATH
 
 source /usr/share/nvm/init-nvm.sh
+
+# Aliases
+alias cat='bat'
+alias hypr='Hyprland'
+alias timeshift='sudo -E timeshift-launcher'
+alias count_files='ls -1 | wc -l'
+alias update_mirrors='reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist'
+# alias copy='cat $2 | xclip -selection clipboard'
+
+  # Workspaces
+  alias play='cd ~/workspace/playcheap/ && tmux new -s play'
+  alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
+  alias nweb='cd ~/workspace/netinove/consigweb && tmux new -s netinove_web'
