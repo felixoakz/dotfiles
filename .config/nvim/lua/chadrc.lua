@@ -7,7 +7,6 @@ local M = {}
 
 M.ui = {
   nvdash = { load_on_startup = true },
-
   telescope = { style = "borderless" }, -- borderless / bordered
 
   statusline = {
@@ -18,8 +17,6 @@ M.ui = {
     order = nil,
     modules = nil,
   },
-
-  lsp = { signature = true },
 }
 
 M.base46 = {

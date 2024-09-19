@@ -12,8 +12,9 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- Leader key mapping for LazyGit
-map("n", "<leader>l", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+map("n", "<leader>gl", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
+-- Split window
 map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Horizontal"})
 map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Vertical"})
 
