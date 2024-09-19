@@ -4,7 +4,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require "configs.treesitter"
+      require("configs.treesitter")
     end,
   },
 
@@ -13,14 +13,14 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("nvchad.configs.lspconfig").defaults()
-      require "configs.lspconfig"
+      require("configs.lspconfig")
     end,
   },
 
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
+    opts = require("configs.conform"),
   },
 
   {
