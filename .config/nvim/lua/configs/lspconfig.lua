@@ -21,3 +21,11 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+-- configuring single server, example: py
+-- lspconfig.pyright.setup {
+--   on_attach = nvlsp.on_attach,
+--   on_init = nvlsp.on_init,
+--   capabilities = nvlsp.capabilities,
+--   filetypes = {"python"}
+-- }
