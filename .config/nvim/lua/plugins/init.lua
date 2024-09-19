@@ -58,10 +58,4 @@ return {
     },
   },
 
-  -- vim blade
-  {
-    "jwalton512/vim-blade",
-    enabled = true,
-    lazy = true,
-  },
 }
