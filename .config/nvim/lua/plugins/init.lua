@@ -7,20 +7,25 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-    lazy = true,
-  	opts = {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
       highlight = {
-       enable = true,
+        enable = true,
       },
-  		ensure_installed = {
+      ensure_installed = {
         "json",
         "javascript",
-        "javascriptreact",
         "python",
         "php",
         "typescript",
-        "typescriptreact",
         "tsx",
         "yaml",
         "html",
@@ -35,8 +40,8 @@ return {
         "gitignore",
         "query",
         "vimdoc",
-  		},
-  	},
+      },
+    },
   },
 
   -- lazygit
@@ -59,5 +64,4 @@ return {
     enabled = true,
     lazy = true,
   },
-
 }
