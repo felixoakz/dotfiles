@@ -6,26 +6,28 @@
 local M = {}
 
 M.ui = {
+
   nvdash = { load_on_startup = true },
+
   telescope = { style = "borderless" }, -- borderless / bordered
 
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
-    -- default/round/block/arrow separators work only for default statusline theme
-    -- round and block will work for minimal theme only
-    separator_style = "default",
+    theme = "default",
+    separator_style = "block",
     order = nil,
     modules = nil,
   },
 }
 
 M.base46 = {
+
   theme = "everblush",
 
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
   },
+
 }
 
 return M

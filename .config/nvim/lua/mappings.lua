@@ -1,9 +1,9 @@
 -- Load NVChad's default mappings
 require("nvchad.mappings")
 
-
 -- Define your custom mappings
 local map = vim.keymap.set
+
 
 -- Normal mode mapping for entering command mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
