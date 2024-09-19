@@ -7,15 +7,8 @@ return {
   },
 
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require("nvchad.configs.lspconfig").defaults()
-
-    end,
-  },
-
-  {
   	"nvim-treesitter/nvim-treesitter",
+    lazy = true,
   	opts = {
       highlight = {
        enable = true,
