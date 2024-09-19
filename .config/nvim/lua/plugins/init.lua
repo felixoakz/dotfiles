@@ -16,9 +16,11 @@ return {
   		ensure_installed = {
         "json",
         "javascript",
+        "javascriptreact",
         "python",
         "php",
         "typescript",
+        "typescriptreact",
         "tsx",
         "yaml",
         "html",
