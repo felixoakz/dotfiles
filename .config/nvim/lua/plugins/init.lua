@@ -1,13 +1,16 @@
 return {
 
   {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "configs.treesitter"
+    end,
   },
 
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
@@ -15,36 +18,11 @@ return {
   },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      highlight = {
-        enable = true,
-      },
-      ensure_installed = {
-        "json",
-        "javascript",
-        "python",
-        "php",
-        "typescript",
-        "tsx",
-        "yaml",
-        "html",
-        "css",
-        "prisma",
-        "markdown",
-        "markdown_inline",
-        "bash",
-        "lua",
-        "vim",
-        "dockerfile",
-        "gitignore",
-        "query",
-        "vimdoc",
-      },
-    },
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
   },
 
-  -- lazygit
   {
     "kdheepak/lazygit.nvim",
     enabled = true,
@@ -57,5 +35,4 @@ return {
       "LazyGitFilterCurrentFile",
     },
   },
-
 }
