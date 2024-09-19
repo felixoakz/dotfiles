@@ -14,5 +14,8 @@ map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 -- Leader key mapping for LazyGit
 map("n", "<leader>l", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
+map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Horizontal"})
+map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Vertical"})
+
 -- Save file mapping in normal, insert, and visual modes
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
