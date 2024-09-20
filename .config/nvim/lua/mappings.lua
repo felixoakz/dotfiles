@@ -44,9 +44,9 @@ map("n", "<leader>gl", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 map("n", "<leader>gm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
 
 -- BUFFER ---
-map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "buffer new" })
+map("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
 
-map("n", "<leader>bx", function()
+map("n", "<leader>x", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
 
