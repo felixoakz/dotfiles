@@ -96,7 +96,7 @@ source /usr/share/nvm/init-nvm.sh
 
 # Aliases
 alias cat='bat'
-alias hypr='Hyprland'
+alias h='Hyprland'
 alias timeshift='sudo -E timeshift-launcher'
 alias count_files='ls -1 | wc -l'
 alias update_mirrors='reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist'
