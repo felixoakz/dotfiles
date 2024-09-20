@@ -4,19 +4,73 @@ require("nvchad.mappings")
 -- Define your custom mappings
 local map = vim.keymap.set
 
+-- Disable mappings
+local unmap = vim.keymap.del
 
--- Normal mode mapping for entering command mode
-map("n", ";", ":", { desc = "CMD enter command mode" })
+local un_map = {
+  { "<leader>/" },
+  { "<leader>/", "v" },
+  { "<leader>b" },
+  { "<leader>x" },
+  { "<leader>n" },
+  { "<leader>th" },
+  { "<leader>h" },
+  { "<leader>v" },
+  { "<leader>e" },
+  { "<leader>ds" },
+  { "<leader>ch" },
+  { "<leader>cm" },
+  { "<leader>fm" },
+  { "<leader>ma" },
+  { "<leader>rn" },
+  { "<leader>pt" },
+}
 
--- Insert mode mapping to exit to normal mode
-map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+for _, mapping in ipairs(un_map) do
+  local mode = mapping[2] or "n"
+  unmap(mode, mapping[1])
+end
 
--- Leader key mapping for LazyGit
+---- REMAPS -----------------------------------------------------------------
+
+--- TELESCOPE ---
+map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
+map("n", "<leader>ft", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
+
+-- GIT ---
+
 map("n", "<leader>gl", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
--- Split window
-map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Horizontal"})
-map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Vertical"})
+map("n", "<leader>gm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
 
--- Save file mapping in normal, insert, and visual modes
--- map({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
+-- BUFFER ---
+map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "buffer new" })
+
+map("n", "<leader>bx", function()
+  require("nvchad.tabufline").close_buffer()
+end, { desc = "buffer close" })
+
+-- LSP ---
+
+map("n", "<leader>F", function()
+  require("conform").format({ lsp_fallback = true })
+end, { desc = "Format file" })
+
+map("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
+
+-- CONFS ---
+
+map("n", "<leader>R", "<cmd>set rnu!<CR>", { desc = "Toggle relative number" })
+
+map("n", "<leader>?", "<cmd>NvCheatsheet<CR>", { desc = "Toggle nvcheatsheet" })
+
+map("n", ";", ":", { desc = "CMD enter command mode" })
+
+map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+
+-- WINDOW ---
+map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Window Horizontal" })
+map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Window Vertical" })
+
+-- UI ---
+map("n", "<leader>t", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
