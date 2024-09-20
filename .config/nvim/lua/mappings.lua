@@ -36,6 +36,7 @@ end
 --- TELESCOPE ---
 map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
 map("n", "<leader>ft", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
+map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "telescope latest files" })
 
 -- GIT ---
 

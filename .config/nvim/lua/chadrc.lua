@@ -30,11 +30,9 @@ M.ui = {
 
     buttons = {
       { "  Find File", "leader f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "leader f o", "Telescope oldfiles" },
+      { "󰈚  Recent Files", "leader f o", "Telescope latest files" },
       { "󰈭  Find Word", "leader f w", "Telescope live_grep" },
-      { "  Bookmarks", "leader m a", "Telescope marks" },
-      { "  Themes", "leader t h", "Telescope themes" },
-      { "  Mappings", "leader c h", "NvCheatsheet" },
+      { "  Mappings", "leader ?", "NvCheatsheet" },
     },
   },
 
@@ -53,7 +51,6 @@ M.base46 = {
 
   theme = "everblush",
   transparency = false,
-  -- theme_toggle = { "onedark", "one_light" },
 
   hl_override = {
     Comment = { italic = true },
