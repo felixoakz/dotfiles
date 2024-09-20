@@ -24,6 +24,7 @@ local un_map = {
   { "<leader>ma" },
   { "<leader>rn" },
   { "<leader>pt" },
+  { "<leader>fo" },
 }
 
 for _, mapping in ipairs(un_map) do
@@ -36,7 +37,7 @@ end
 --- TELESCOPE ---
 map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
 map("n", "<leader>ft", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
-map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "telescope latest files" })
+map("n", "<leader>fl", "<cmd>Telescope oldfiles<CR>", { desc = "telescope latest files" })
 
 -- GIT ---
 
