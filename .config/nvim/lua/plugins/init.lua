@@ -45,4 +45,76 @@ return {
     },
   },
 
+
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+
+      lsp = {
+        signature = {
+          enabled = false,
+        },
+      },
+
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+
+    -- add cmdline src here
+    -- sources is a list table so we have to write full table, unlike in key/val tables
+    opts = {
+      sources = {
+        { name = "nvim_lsp" },
+        { name = "path" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "nvim_lua" },
+        { name = "cmdline" },
+      },
+      experimental = {
+        ghost_text = true,
+      },
+    },
+
+    dependencies = {
+      {
+        "hrsh7th/cmp-cmdline",
+        event = { "CmdLineEnter" },
+        opts = { history = true, updateevents = "CmdlineEnter,CmdlineChanged" },
+        config = function()
+          local cmp = require "cmp"
+
+          cmp.setup.cmdline("/", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+              { name = "buffer" },
+            },
+          })
+
+          -- `:` cmdline setup.
+          cmp.setup.cmdline(":", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = cmp.config.sources({
+              { name = "path" },
+            }, {
+              {
+                name = "cmdline",
+                option = {
+                  ignore_cmds = { "Man", "!" },
+                },
+              },
+            }),
+          })
+        end,
+      },
+    },
+  },
+
 }
