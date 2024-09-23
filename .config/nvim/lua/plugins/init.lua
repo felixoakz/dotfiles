@@ -50,13 +50,19 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-
-      lsp = {
-        signature = {
-          enabled = false,
+      views = {
+        cmdline_popup = {
+          position = {
+            row = -2,
+            -- col = -1,
+          },
         },
       },
-
+      lsp = {
+        signature = {
+          enabled = true,
+        },
+      },
     },
     dependencies = {
       "MunifTanjim/nui.nvim",
