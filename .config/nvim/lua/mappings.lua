@@ -70,6 +70,8 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
+map("n", "<leader>X", "<cmd>qa<cr>", { desc = "Exit All" })
+
 -- WINDOW ---
 map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Window Horizontal" })
 map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Window Vertical" })
