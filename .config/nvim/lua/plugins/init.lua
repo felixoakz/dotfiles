@@ -53,14 +53,14 @@ return {
       views = {
         cmdline_popup = {
           position = {
-            row = -2,
+            row = -5,
             -- col = -1,
           },
         },
       },
       lsp = {
         signature = {
-          enabled = true,
+          enabled = false,
         },
       },
     },
