@@ -1,80 +1,48 @@
--- Load NVChad's default mappings
-require("nvchad.mappings")
+--  See `:help vim.keymap.set()`
 
--- Define your custom mappings
 local map = vim.keymap.set
 
--- Disable mappings
-local unmap = vim.keymap.del
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-local un_map = {
-  { "<leader>/" },
-  { "<leader>/", "v" },
-  { "<leader>b" },
-  { "<leader>x" },
-  { "<leader>n" },
-  { "<leader>th" },
-  { "<leader>h" },
-  { "<leader>v" },
-  { "<leader>e" },
-  { "<leader>ds" },
-  { "<leader>ch" },
-  { "<leader>cm" },
-  { "<leader>fm" },
-  { "<leader>ma" },
-  { "<leader>rn" },
-  { "<leader>pt" },
-  { "<leader>fo" },
-}
+-- Diagnostic keymaps
+map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
-for _, mapping in ipairs(un_map) do
-  local mode = mapping[2] or "n"
-  unmap(mode, mapping[1])
-end
+-- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
+-- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
+-- is not what someone will guess without a bit more experience.
+--
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
----- REMAPS -----------------------------------------------------------------
+-- TIP: Disable arrow keys in normal mode
+map('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+map('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+map('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+map('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
---- TELESCOPE ---
-map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
-map("n", "<leader>ft", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
-map("n", "<leader>fl", "<cmd>Telescope oldfiles<CR>", { desc = "telescope latest files" })
+-- Keybinds to make split navigation easier.
+--  Use CTRL+<hjkl> to switch between windows
+--
+--  See `:help wincmd` for a list of all window commands
+map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+map('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- GIT ---
+-- my mappings
+map('n', '<leader>l', '<cmd>LazyGit<CR>', { desc = 'LazyGit' })
 
-map("n", "<leader>gl", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
-
-map("n", "<leader>gm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
-
--- BUFFER ---
-map("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
-
-map("n", "<leader>x", function()
-  require("nvchad.tabufline").close_buffer()
-end, { desc = "buffer close" })
-
--- LSP ---
-
-map("n", "<leader>F", function()
-  require("conform").format({ lsp_fallback = true })
-end, { desc = "Format file" })
-
-map("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
-
--- CONFS ---
-
-map("n", "<leader>R", "<cmd>set rnu!<CR>", { desc = "Toggle relative number" })
-
-map("n", "<leader>?", "<cmd>NvCheatsheet<CR>", { desc = "Toggle nvcheatsheet" })
-
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
-map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
-map("n", "<leader>X", "<cmd>qa<cr>", { desc = "Exit All" })
+map('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
 -- WINDOW ---
-map("n", "<leader>-", "<cmd>sp<cr>", { desc = "Split Window Horizontal" })
-map("n", "<leader>|", "<cmd>vsp<cr>", { desc = "Split Window Vertical" })
+map('n', '<leader>-', '<cmd>sp<cr>', { desc = 'Split Window Horizontal' })
+map('n', '<leader>|', '<cmd>vsp<cr>', { desc = 'Split Window Vertical' })
 
--- UI ---
-map("n", "<leader>t", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
+-- Map <Tab> to go to the next buffer
+map('n', '<Tab>', '<cmd>bnext<CR>', { desc = 'Go to next buffer' })
+
+-- Map <Shift-Tab> to go to the previous buffer
+map('n', '<S-Tab>', '<cmd>bprevious<CR>', { desc = 'Go to previous buffer' })
