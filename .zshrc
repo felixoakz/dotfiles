@@ -87,7 +87,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/home/felixsouzaps/.local/bin
 
-export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+# export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+# export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$HOME/.local/bin":$PATH
@@ -99,10 +101,9 @@ alias cat='bat'
 alias h='Hyprland'
 alias timeshift='sudo -E timeshift-launcher'
 alias count_files='ls -1 | wc -l'
-alias update_mirrors='reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist'
-# alias copy='cat $2 | xclip -selection clipboard'
 
-  # Workspaces
-  alias play='cd ~/workspace/playcheap/ && tmux new -s play'
-  alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
-  alias nweb='cd ~/workspace/netinove/consigweb && tmux new -s netinove_web'
+# Workspaces
+alias play='cd ~/workspace/playcheap/ && tmux new -s play'
+alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
+alias web='cd ~/workspace/netinove/consigweb && tmux new -s netinove_web'
+alias app='cd ~/workspace/netinove/consigapp && tmux new -s netinove_app'
