@@ -9,7 +9,9 @@ vim.g.have_nerd_font = true
 
 require 'options'
 require 'mappings'
-require 'autocommands'
+require 'autocmds'
+
+vim.g.autoformat = false
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info

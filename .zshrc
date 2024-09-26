@@ -104,6 +104,9 @@ alias count_files='ls -1 | wc -l'
 
 # Workspaces
 alias play='cd ~/workspace/playcheap/ && tmux new -s play'
+alias boas='cd ~/workspace/boasvendas/ && tmux new -s boas'
+
+alias neti='cd ~/workspace/netinove && tmux new -s netinove'
+
 alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
-alias web='cd ~/workspace/netinove/consigweb && tmux new -s netinove_web'
-alias app='cd ~/workspace/netinove/consigapp && tmux new -s netinove_app'
+#

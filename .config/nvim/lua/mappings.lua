@@ -33,7 +33,7 @@ map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- my mappings
-map('n', '<leader>l', '<cmd>LazyGit<CR>', { desc = 'LazyGit' })
+map('n', '<leader>gl', '<cmd>LazyGit<CR>', { desc = 'git [l]azyGit' })
 
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
