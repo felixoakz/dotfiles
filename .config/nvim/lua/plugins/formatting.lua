@@ -8,6 +8,7 @@ return {
         '<leader>f',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
+          vim.notify('Buffer Formatted', vim.log.levels.INFO)
         end,
         mode = '',
         desc = '[F]ormat buffer',

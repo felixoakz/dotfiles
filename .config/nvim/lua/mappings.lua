@@ -1,7 +1,6 @@
 --  See `:help vim.keymap.set()`
 
 local map = vim.keymap.set
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -37,6 +36,8 @@ map('n', '<leader>gl', '<cmd>LazyGit<CR>', { desc = 'git [l]azyGit' })
 
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
+
+--
 -- WINDOW ---
 map('n', '<leader>-', '<cmd>sp<cr>', { desc = 'Split Window Horizontal' })
 map('n', '<leader>|', '<cmd>vsp<cr>', { desc = 'Split Window Vertical' })
