@@ -98,9 +98,9 @@ return {
       end, { desc = '[/] in Open Files' })
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>n', function()
+      vim.keymap.set('n', '<leader>.', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
-      end, { desc = ' neovim config files' })
+      end, { desc = 'neovim config files' })
     end,
   },
 }

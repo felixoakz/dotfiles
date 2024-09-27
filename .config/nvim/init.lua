@@ -1,7 +1,7 @@
 -- Set <space> as the leader key
 -- See `:help mapleader`
 
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -17,10 +17,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
---
--- [[ Install `lazy.nvim` plugin manager ]]
-
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+-- [[ Install `lazy.nvim` plugin manager ]] -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -31,14 +28,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
+-- [[ Configure and install plugins ]] -- For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 require('lazy').setup({
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'plugins' },
 }, {
   ui = {

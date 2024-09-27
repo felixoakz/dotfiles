@@ -11,7 +11,7 @@ map('n', '<leader>cd', vim.diagnostic.setloclist, { desc = 'Open [d]iagnostic qu
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Map <leader>t to open a terminal in the current window (overriding the buffer)
-map('n', '<leader>t', '<cmd>terminal<CR>', { noremap = true, silent = true, desc = 'Terminal open' })
+map('n', '<leader>t', '<cmd>terminal<CR>', { noremap = true, silent = true, desc = 'Terminal' })
 
 -- TIP: Disable arrow keys in normal mode
 map('n', '<left>', '<cmd>echo "Use h to move!"<CR>')
@@ -28,8 +28,8 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
 ------------ WINDOW ---
-map('n', '<leader>w-', '<cmd>sp<cr>', { desc = 'Split Window Horizontal' })
-map('n', '<leader>w|', '<cmd>vsp<cr>', { desc = 'Split Window Vertical' })
+map('n', '<leader>-', '<cmd>sp<cr>', { desc = 'Split Window Horizontal' })
+map('n', '<leader>|', '<cmd>vsp<cr>', { desc = 'Split Window Vertical' })
 
 ------------ BUFFERS ---
 -- Map <Tab> to go to the next buffer
