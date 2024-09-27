@@ -6,7 +6,7 @@ return {
       views = {
         cmdline_popup = {
           position = {
-            row = -5,
+            row = -3,
             -- col = -1,
           },
         },

@@ -5,13 +5,13 @@ return {
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>f',
+        '<leader>bf',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
           vim.notify('Buffer Formatted', vim.log.levels.INFO)
         end,
-        mode = '',
-        desc = '[F]ormat buffer',
+        mode = 'n',
+        desc = 'buffer [f]ormat',
       },
     },
     opts = {

@@ -58,7 +58,7 @@ system_packages=(
   "timeshift"          # System restore utility
 
   # Graphics and display
-  "swaybg"            # Background image handler for Wayland compositors
+  "hyprpaper"
   "hyprland"          # A dynamic tiling Wayland compositor
   "wayland"           # Display server protocol, replacement for X11
   "wayland-protocols" # Extensions to the Wayland protocol

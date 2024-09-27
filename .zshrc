@@ -104,7 +104,7 @@ alias count_files='ls -1 | wc -l'
 
 # Workspaces
 alias play='cd ~/workspace/playcheap/ && tmux new -s play'
-alias boas='cd ~/workspace/boasvendas/ && tmux new -s boas'
+alias topmaster='cd ~/workspace/topmaster/ && tmux new -s topmaster'
 
 alias neti='cd ~/workspace/netinove && tmux new -s netinove'
 

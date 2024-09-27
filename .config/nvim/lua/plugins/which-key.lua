@@ -42,13 +42,11 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-        { '<leader>d', group = '[D]ocument' },
-        { '<leader>r', group = '[R]ename' },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>w', group = '[W]orkspace' },
-        { '<leader>t', group = '[T]oggle' },
-        { '<leader>g', group = 'Git', mode = { 'n', 'v' } },
+        { '<leader>c', group = ' Code...', mode = { 'n', 'x' } },
+        { '<leader>b', group = ' Buffer...' },
+        { '<leader>s', group = ' Search...' },
+        { '<leader>w', group = ' Windows' },
+        { '<leader>g', group = ' Git...', mode = { 'n', 'v' } },
       },
     },
   },
