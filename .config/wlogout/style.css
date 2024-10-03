@@ -31,7 +31,7 @@ button:focus {
 }
 
 button:hover {
-  background-color: #3f3fff; 
+  background-color: #1793D1; 
   color: #fff;
   background-size: 50%;
   margin: 50px;
@@ -48,7 +48,7 @@ button:hover {
   background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
 }
 #suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+  background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
 }
 #logout {
   background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));

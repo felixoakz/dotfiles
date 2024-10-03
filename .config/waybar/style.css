@@ -2,7 +2,6 @@
     border-radius: 3px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 14px;
     color: #B5C5CF; /* Text color */
 }
 
@@ -15,14 +14,13 @@ tooltip {
     background: #1f1f1f;
     border-width: 1px;
     border-style: solid;
-    border-color: #3f3fff;
+    border-color: #1793D1;
 }
 
 /* Workspace Buttons */
 #workspaces button {
     padding: 5px;
     color: #c5c5c5; /* Lighter gray */
-    margin-right: 5px;
 }
 
 #workspaces button.active {
@@ -31,7 +29,7 @@ tooltip {
 
 #workspaces button.focused {
     color: #FFFFFF;
-    background: #3f3fff; /* Blue for focused workspace */
+    background: #1793D1; /* Blue for focused workspace */
 }
 
 #workspaces button.urgent {
@@ -40,17 +38,17 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: #3f3fff; /* Hover state */
+    background: #1793D1; /* Hover state */
     color: #FFFFFF;
 }
 
 /* Modules */
+#workspaces,
 #custom-media,
 #custom-powermenu,
 #pulseaudio,
 /* #network, */
 /* #bluetooth, */
-#workspaces,
 #tray,
 #cpu,
 /* #clock, */
@@ -59,24 +57,32 @@ tooltip {
 #backlight {
   margin-top: 10px;
   padding: 0px 12px;
-  /* border: 1px solid #909090; */
   transition: background-color 0.3s;
 }
 
+#custom-powermenu {
+    margin-right: 6px;
+}
+
+#cpu {
+    margin-left: 6px;
+}
 /* Hover effect */
 #custom-media:hover,
 #custom-powermenu:hover,
 #pulseaudio:hover,
 /* #network:hover, */
 /* #bluetooth:hover, */
-#workspaces:hover,
+/*#workspaces:hover,*/
 #tray:hover,
 #cpu:hover,
 /* #clock:hover, */
 #memory:hover,
 #temperature:hover,
 #backlight:hover {
-  background-color: #3f3fff;
+  background-color: #1793D1;
   color: #FFFFFF;
 }
+
+
 

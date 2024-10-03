@@ -1,35 +1,22 @@
 {
   "reload_style_on_change": true,
-  "font": "JetBrainsMono Nerd Font 10",
-  "spacing": 8,
-  // ----------
-  // modules available
   "modules-left": [
-    "hyprland/workspaces"
+    "cpu",
+    "memory",
+    "temperature",
   ],
-  "modules-center": [],
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
   "modules-right": [
     "custom/media",
-    "group/hardware",
     "tray",
+    "pulseaudio",
     //"network",
     //"bluetooth",
-    "pulseaudio",
     //"clock",
     "custom/powermenu"
   ],
-  // ----------
-  //group hardware
-  "group/hardware": {
-    "orientation": "horizontal",
-    "modules": [
-      "cpu",
-      "memory",
-      "temperature"
-    ]
-  },
-  // ----------
-  // includes modules configs
   "include": [
     "~/dotfiles/.config/waybar/modules.jsonc"
   ]

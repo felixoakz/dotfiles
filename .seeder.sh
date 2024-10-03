@@ -107,6 +107,7 @@ system_packages=(
   "python-pillow"                   # Python Imaging Library (Pillow)
   "xdg-desktop-portal-hyprland-git" # Hyprland-specific implementation of xdg-desktop-portal
   "insomnia"
+  "fzf"
 )
 
 # List of workspace packages to install

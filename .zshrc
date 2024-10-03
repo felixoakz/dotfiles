@@ -96,11 +96,16 @@ export PATH="$HOME/.local/bin":$PATH
 
 source /usr/share/nvm/init-nvm.sh
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Aliases
 alias cat='bat'
-alias h='Hyprland'
 alias timeshift='sudo -E timeshift-launcher'
-alias count_files='ls -1 | wc -l'
+alias countfiles='ls -1 | wc -l'
+alias fzf='fzf --preview="bat --color=always {}"'
+alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
+alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Workspaces
 alias play='cd ~/workspace/playcheap/ && tmux new -s play'
