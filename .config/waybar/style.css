@@ -1,45 +1,33 @@
 * {
-    border-radius: 3px;
+    border-radius: 2px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    color: #B5C5CF; /* Text color */
 }
 
 window#waybar {
-    color: #fff;
+    color: #666;
     background: transparent;
 }
 
 tooltip {
     background: #1f1f1f;
     border-width: 1px;
-    border-style: solid;
     border-color: #1793D1;
 }
 
 /* Workspace Buttons */
-#workspaces button {
-    padding: 5px;
-    color: #c5c5c5; /* Lighter gray */
-}
+/*#workspaces button {}*/
 
 #workspaces button.active {
-    color: #FFFFFF; /* White when active */
+    color: #1793D1;
 }
 
-#workspaces button.focused {
-    color: #FFFFFF;
-    background: #1793D1; /* Blue for focused workspace */
-}
+/*#workspaces button.focused {*/
+/*}*/
 
 #workspaces button.urgent {
     color: #0f0f0f;
-    background: #ff5252; /* Red for urgent workspaces */
-}
-
-#workspaces button:hover {
-    background: #1793D1; /* Hover state */
-    color: #FFFFFF;
+    background: #A38800;
 }
 
 /* Modules */
@@ -47,7 +35,7 @@ tooltip {
 #custom-media,
 #custom-powermenu,
 #pulseaudio,
-/* #network, */
+ #network, 
 /* #bluetooth, */
 #tray,
 #cpu,
@@ -55,34 +43,24 @@ tooltip {
 #memory,
 #temperature,
 #backlight {
-  margin-top: 10px;
   padding: 0px 12px;
   transition: background-color 0.3s;
+  border: none;
 }
 
-#custom-powermenu {
-    margin-right: 6px;
-}
-
-#cpu {
-    margin-left: 6px;
-}
 /* Hover effect */
-#custom-media:hover,
-#custom-powermenu:hover,
-#pulseaudio:hover,
 /* #network:hover, */
 /* #bluetooth:hover, */
 /*#workspaces:hover,*/
+/* #clock:hover, */
+#custom-media:hover,
+#custom-powermenu:hover,
+#pulseaudio:hover,
 #tray:hover,
 #cpu:hover,
-/* #clock:hover, */
 #memory:hover,
 #temperature:hover,
 #backlight:hover {
   background-color: #1793D1;
-  color: #FFFFFF;
+  color: #000;
 }
-
-
-

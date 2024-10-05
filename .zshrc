@@ -97,21 +97,19 @@ export PATH="$HOME/.local/bin":$PATH
 source /usr/share/nvm/init-nvm.sh
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 # Aliases
 alias cat='bat'
 alias timeshift='sudo -E timeshift-launcher'
-alias countfiles='ls -1 | wc -l'
+alias count='ls -1 | wc -l'
 alias fzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
 alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
+alias hosts='nvim /etc/hosts'
 
 # Workspaces
 alias play='cd ~/workspace/playcheap/ && tmux new -s play'
-alias topmaster='cd ~/workspace/topmaster/ && tmux new -s topmaster'
-
+alias vendas='cd ~/workspace/vendas/ && tmux new -s vendas'
 alias neti='cd ~/workspace/netinove && tmux new -s netinove'
-
 alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
-#
