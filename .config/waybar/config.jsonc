@@ -2,20 +2,21 @@
   "reload_style_on_change": true,
   "position": "bottom",
   "modules-left": [
+    "temperature",
     "cpu",
     "memory",
-    "temperature",
+    "pulseaudio",
+    "tray",
+    "custom/media",
+
   ],
   "modules-center": [
     "hyprland/workspaces",
   ],
   "modules-right": [
-    "custom/media",
-    "tray",
-    "pulseaudio",
     //"network",
     //"bluetooth",
-    //"clock",
+    "clock",
     "custom/powermenu"
   ],
   "include": [
