@@ -74,8 +74,8 @@ return {
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'active [k]eymaps' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[r]esume last search' })
-      vim.keymap.set('n', '<leader><leader>', builtin.oldfiles, { desc = 'Recent Files' })
-      vim.keymap.set('n', '<leader>bl', builtin.buffers, { desc = 'buffers [l]ist' })
+      vim.keymap.set('n', '<leader>so', builtin.oldfiles, { desc = 'recent [o]pened Files' })
+      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'buffers List' })
       vim.keymap.set('n', '<leader>st', builtin.builtin, { desc = 'list [t]elescope commands' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp' })
 

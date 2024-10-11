@@ -1,6 +1,6 @@
 {
   "reload_style_on_change": true,
-  "position": "bottom",
+  //"position": "bottom",
   "modules-left": [
     "temperature",
     "cpu",
