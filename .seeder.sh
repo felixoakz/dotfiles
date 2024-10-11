@@ -70,6 +70,7 @@ system_packages=(
   "waybar"            # Highly customizable status bar for Wayland
   "wlogout"           # Logout menu for Wayland
   "swappy"            # GUI for annotating screenshots in Wayland
+  "xdg-desktop-portal-gtk" # allow gnome theme to be set 
 
   # Fonts
   "ttf-dejavu"                # DejaVu TrueType fonts
@@ -259,6 +260,8 @@ else
   fi
 
   echo "Oh My Zsh installation and setup complete!"
+
+  echo -e "[Settings]\ngtk-application-prefer-dark-theme=1\ngtk-theme-name=Adwaita-dark" | tee -a ~/.config/gtk-3.0/settings.ini > /dev/null
 
   # Final cleanup
   print_message "$COLOR_YELLOW" "Cleaning up..."
