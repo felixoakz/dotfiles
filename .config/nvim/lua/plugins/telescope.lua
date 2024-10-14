@@ -49,11 +49,14 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
+        defaults = {
+        -- layout_config = {
+        --   prompt_position = "top",
+        -- },
         --   mappings = {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
-        -- },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
@@ -68,14 +71,15 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[f]iles' })
-      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[g]rep within project' })
+      vim.keymap.set('n', '<leader><leader>', builtin.find_files, { desc = 'directory Files' })
+      vim.keymap.set('n', '-', builtin.oldfiles, { desc = 'recent Files' })
+
+      vim.keymap.set('n', '<leader>-', builtin.live_grep, { desc = 'search in project' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'current [w]ord' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'active [k]eymaps' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[r]esume last search' })
-      vim.keymap.set('n', '<leader>so', builtin.oldfiles, { desc = 'recent [o]pened Files' })
-      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'buffers List' })
+      vim.keymap.set('n', '<leader>bb', builtin.buffers, { desc = '[b]uffers List' })
       vim.keymap.set('n', '<leader>st', builtin.builtin, { desc = 'list [t]elescope commands' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp' })
 
@@ -86,7 +90,7 @@ return {
           winblend = 10,
           previewer = false,
         })
-      end, { desc = 'Search in current buffer' })
+      end, { desc = 'search current buffer' })
 
       -- It's also possible to pass additional configuration options.
       --  See `:help telescope.builtin.live_grep()` for information about particular keys
@@ -98,7 +102,7 @@ return {
       end, { desc = '[/] in Open Files' })
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>.', function()
+      vim.keymap.set('n', '<leader>n', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = 'neovim config files' })
     end,
