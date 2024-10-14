@@ -61,3 +61,15 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- dadbod dbs
+
+vim.g.db_ui_save_location = '~/db_ui' -- Optional: Set the location to save queries
+
+vim.g.dbs = {
+    gouveia = 'sqlite:///~/workspace/sistema_gouveia/server/sqlite_gouveia.db', -- your local SQLite DB
+
+    -- postgres_via_ssh = 'postgres://user:password@localhost:5432/dbname', -- PostgreSQL via SSH (optional)
+
+    -- mysql_local = 'mysql://user:password@localhost:3306/database_name', -- MySQL local example
+}

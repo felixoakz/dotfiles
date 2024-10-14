@@ -41,6 +41,13 @@ return {
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      cmp.setup.filetype({ 'sql' }, {
+        sources = {
+          { name = 'vim-dadbod-completition' },
+          { name = 'buffer' },
+        },
+      })
+
       cmp.setup {
         snippet = {
           expand = function(args)
