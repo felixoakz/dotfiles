@@ -28,7 +28,7 @@ ZSH_THEME="af-magic"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 7
+zstyle ':omz:update' frequency 15
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -80,6 +80,36 @@ source $ZSH/oh-my-zsh.sh
 
 ### User configuration ###
 
+### Aliases
+alias cat='bat'
+alias timeshift='sudo -E timeshift-launcher'
+alias count='ls -1 | wc -l'
+alias fzf='fzf --preview="bat --color=always {}"'
+alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
+alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
+alias hosts='nvim /etc/hosts'
+
+
+# Alias to search for a specific string in the current directory
+# It finds all files in the current directory and its subdirectories
+# Then it uses grep to search for the string inside those files
+alias sgrep='find . -type f -exec grep -l "$1" {} +'
+
+# Explanation:
+# find .          - Search in the current directory ('.') and its subdirectories
+# -type f         - Only look for files (ignore directories)
+# -exec grep -l   - For each file found, execute the grep command to search for the string
+# "$1"            - The first argument passed to the alias (the string to search for)
+# {}              - Placeholder for the current file found by the 'find' command
+# +               - Run grep on multiple files at once for efficiency
+
+# Workspaces
+alias play='cd ~/projects/playcheap/ && tmux new -s play'
+alias vendas='cd ~/projects/vendas/ && tmux new -s vendas'
+alias neti='cd ~/projects/netinove && tmux new -s netinove'
+alias gouveia='cd ~/projects/sistema_gouveia && tmux new -s gouveia'
+
+
 # Path settings
 export EDITOR=nvim
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -94,22 +124,12 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$HOME/.local/bin":$PATH
 
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 source /usr/share/nvm/init-nvm.sh
 
 # Set up fzf key bindings and fuzzy completion
-# source <(fzf --zsh)
+source <(fzf --zsh)
 
-# Aliases
-alias cat='bat'
-alias timeshift='sudo -E timeshift-launcher'
-alias count='ls -1 | wc -l'
-alias fzf='fzf --preview="bat --color=always {}"'
-alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
-alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
-alias hosts='nvim /etc/hosts'
-
-# Workspaces
-alias play='cd ~/workspace/playcheap/ && tmux new -s play'
-alias vendas='cd ~/workspace/vendas/ && tmux new -s vendas'
-alias neti='cd ~/workspace/netinove && tmux new -s netinove'
-alias gouveia='cd ~/workspace/sistema_gouveia && tmux new -s gouveia'
+export PATH="/home/felixoakz/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/felixoakz/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

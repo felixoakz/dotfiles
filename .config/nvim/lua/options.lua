@@ -63,13 +63,12 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- dadbod dbs
-
 vim.g.db_ui_save_location = '~/db_ui' -- Optional: Set the location to save queries
 
 vim.g.dbs = {
-    gouveia = 'sqlite:///~/workspace/sistema_gouveia/server/sqlite_gouveia.db', -- your local SQLite DB
+    gouveia = 'sqlite:///~/projects/gouveia/server/sqlite_gouveia.db',
+    consig_dev = 'mariadb://usersystem:o-b_NKFkCzbvj6xW*GqgwdbK@50.116.46.77:33016/consig_dev',
 
+    -- netinove_local = 'mariadb://root:12345@localhost:43002', -- MySQL Docker example
     -- postgres_via_ssh = 'postgres://user:password@localhost:5432/dbname', -- PostgreSQL via SSH (optional)
-
-    -- mysql_local = 'mysql://user:password@localhost:3306/database_name', -- MySQL local example
 }

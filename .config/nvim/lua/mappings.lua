@@ -28,8 +28,8 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
 ------------ WINDOW ---
-map('n', '<leader>x', '<cmd>sp<cr>', { desc = 'window split horiz' })
-map('n', '<leader>v', '<cmd>vsp<cr>', { desc = 'window split vert' })
+map('n', '<leader>x', '<cmd>sp<cr>', { desc = 'split horizontal' })
+map('n', '<leader>v', '<cmd>vsp<cr>', { desc = 'split vertical' })
 
 ------------ BUFFERS ---
 -- Map <Tab> to go to the next buffer
@@ -43,3 +43,6 @@ map('n', '<leader>bd', '<cmd>bdelete<CR>', { noremap = true, silent = true, desc
 
 -- Map <leader>ba to close all buffers except the current one
 map('n', '<leader>ba', '<cmd>bufdo bdelete<CR>', { noremap = true, silent = true, desc = 'buffer delete [a]ll' })
+
+-- Map <leader>bn to new buffer
+map('n', '<leader>bn', '<cmd>enew<CR>', { noremap = true, silent = true, desc = '[n]ew buffer' })

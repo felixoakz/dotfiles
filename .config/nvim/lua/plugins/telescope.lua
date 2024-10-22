@@ -71,15 +71,15 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
-      vim.keymap.set('n', '<leader><leader>', builtin.find_files, { desc = 'directory Files' })
-      vim.keymap.set('n', '-', builtin.oldfiles, { desc = 'recent Files' })
+      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'directory [f]iles' })
+      vim.keymap.set('n', '<leader>sr', builtin.oldfiles, { desc = '[r]ecent files' })
+      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[g]rep in project' })
+      vim.keymap.set('n', '<leader>sl', builtin.resume, { desc = '[l]ast search' })
 
-      vim.keymap.set('n', '<leader>-', builtin.live_grep, { desc = 'search in project' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'current [w]ord' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'active [k]eymaps' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostics' })
-      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[r]esume last search' })
-      vim.keymap.set('n', '<leader>bb', builtin.buffers, { desc = '[b]uffers List' })
+      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Buffer List' })
       vim.keymap.set('n', '<leader>st', builtin.builtin, { desc = 'list [t]elescope commands' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp' })
 
@@ -102,7 +102,7 @@ return {
       end, { desc = '[/] in Open Files' })
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>n', function()
+      vim.keymap.set('n', '<leader>.', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = 'neovim config files' })
     end,

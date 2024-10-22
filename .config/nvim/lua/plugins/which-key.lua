@@ -45,7 +45,6 @@ return {
         { '<leader>c', group = ' Code...', mode = { 'n', 'x' } },
         { '<leader>b', group = ' Buffer...' },
         { '<leader>s', group = ' Search...' },
-        { '<leader>y', group = ' Yazi...' },
         { '<leader>g', group = ' Git...', mode = { 'n', 'v' } },
       },
     },

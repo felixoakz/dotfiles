@@ -1,21 +1,4 @@
 return {
-
-  {
-    'kdheepak/lazygit.nvim',
-    enabled = true,
-    lazy = true,
-    cmd = {
-      'LazyGit',
-      'LazyGitConfig',
-      'LazyGitCurrentFile',
-      'LazyGitFilter',
-      'LazyGitFilterCurrentFile',
-    },
-    config = function()
-      vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<CR>', { noremap = true, silent = true, desc = 'git [l]azyGit' })
-    end,
-  },
-
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
