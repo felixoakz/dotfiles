@@ -80,36 +80,6 @@ source $ZSH/oh-my-zsh.sh
 
 ### User configuration ###
 
-### Aliases
-alias cat='bat'
-alias timeshift='sudo -E timeshift-launcher'
-alias count='ls -1 | wc -l'
-alias fzf='fzf --preview="bat --color=always {}"'
-alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
-alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
-alias hosts='nvim /etc/hosts'
-
-
-# Alias to search for a specific string in the current directory
-# It finds all files in the current directory and its subdirectories
-# Then it uses grep to search for the string inside those files
-alias sgrep='find . -type f -exec grep -l "$1" {} +'
-
-# Explanation:
-# find .          - Search in the current directory ('.') and its subdirectories
-# -type f         - Only look for files (ignore directories)
-# -exec grep -l   - For each file found, execute the grep command to search for the string
-# "$1"            - The first argument passed to the alias (the string to search for)
-# {}              - Placeholder for the current file found by the 'find' command
-# +               - Run grep on multiple files at once for efficiency
-
-# Workspaces
-alias play='cd ~/projects/playcheap/ && tmux new -s play'
-alias vendas='cd ~/projects/vendas/ && tmux new -s vendas'
-alias neti='cd ~/projects/netinove && tmux new -s netinove'
-alias gouveia='cd ~/projects/sistema_gouveia && tmux new -s gouveia'
-
-
 # Path settings
 export EDITOR=nvim
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -133,3 +103,43 @@ source <(fzf --zsh)
 
 export PATH="/home/felixoakz/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/felixoakz/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+
+
+
+# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+# █░▄▄▀█░███▄██░▄▄▀█░▄▄█░▄▄█░▄▄██
+# █░▀▀░█░███░▄█░▀▀░█▄▄▀█░▄▄█▄▄▀██
+# █▄██▄█▄▄█▄▄▄█▄██▄█▄▄▄█▄▄▄█▄▄▄██
+# ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+
+alias cat='bat'
+alias timeshift='sudo -E timeshift-launcher'
+alias count='ls -1 | wc -l'
+alias fzf='fzf --preview="bat --color=always {}"'
+alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
+alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
+alias hosts='nvim /etc/hosts'
+alias icat="kitten icat"
+
+# Alias to search for a specific string in the current directory
+# It finds all files in the current directory and its subdirectories
+# Then it uses grep to search for the string inside those files
+alias sgrep='find . -type f -exec grep -l "$1" {} +'
+
+# Explanation:
+# find .          - Search in the current directory ('.') and its subdirectories
+# -type f         - Only look for files (ignore directories)
+# -exec grep -l   - For each file found, execute the grep command to search for the string
+# "$1"            - The first argument passed to the alias (the string to search for)
+# {}              - Placeholder for the current file found by the 'find' command
+# +               - Run grep on multiple files at once for efficiency
+
+# Workspaces
+alias play='cd ~/projects/playcheap/ && tmux new -s play'
+alias vendas='cd ~/projects/vendas/ && tmux new -s vendas'
+alias neti='cd ~/projects/netinove && tmux new -s netinove'
+alias gouveia='cd ~/projects/sistema_gouveia && tmux new -s gouveia'
+alias fserv='cd ~/projects/fserver && tmux new -s fserver'
+
+
