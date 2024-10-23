@@ -11,7 +11,7 @@ map('n', '<leader>cd', vim.diagnostic.setloclist, { desc = 'Open [d]iagnostic qu
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Map <leader>t to open a terminal in the current window (overriding the buffer)
-map('n', '\\', '<cmd>terminal<CR>', { noremap = true, silent = true, desc = 'Terminal' })
+map('n', '-', '<cmd>terminal<CR>', { noremap = true, silent = true, desc = 'Terminal' })
 
 -- TIP: Disable arrow keys in normal mode
 map('n', '<left>', '<cmd>echo "Use h to move!"<CR>')

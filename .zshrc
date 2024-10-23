@@ -121,6 +121,7 @@ alias nfzf='nvim $(fzf --preview="bat --color=always {}")'
 alias nfzfm='nvim $(fzf -m --preview="bat --color=always {}")'
 alias hosts='nvim /etc/hosts'
 alias icat="kitten icat"
+alias lg='lazygit'
 
 # Alias to search for a specific string in the current directory
 # It finds all files in the current directory and its subdirectories
