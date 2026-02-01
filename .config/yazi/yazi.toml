@@ -1,0 +1,12 @@
+[mgr]
+
+show_hidden = true
+
+# show_hidden = true
+ratio = [1, 1, 2]
+
+[[opener.edit]]
+run = '${EDITOR:-nvim} "$@"'
+desc = "$EDITOR"
+block = true
+for = "unix"
