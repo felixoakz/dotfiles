@@ -4,8 +4,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 # Font
 font-family = "JetBrainsMono Nerd Font Mono"
 font-style = Regular
-linux-font-size = 10
-macos-font-size = 14
+font-size = 12
 
 # Window
 theme = TokyoNight Night
