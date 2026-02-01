@@ -36,11 +36,10 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
 
 # Plugins
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 # Source Oh My Zsh (loads OMZ, plugins, and theme)
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ------------------------------------------------------------------------------
 # 3. COMPLETIONS & INTEGRATIONS
