@@ -30,7 +30,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Shortcuts
-alias c='opencode'
+alias oc='opencode'
 alias d='docker'
 n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
 
