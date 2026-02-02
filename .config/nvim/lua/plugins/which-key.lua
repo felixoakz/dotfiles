@@ -4,7 +4,7 @@ return {
 		'folke/which-key.nvim',
 		event = 'VeryLazy', -- Load on VeryLazy for better performance
 		opts = {
-			preset = 'modern', -- Use the modern preset for a LazyVim-like look
+			preset = 'helix', -- Use the helix preset for a LazyVim-like look
 			win = {
 				-- position = 'right', -- Show as a column on the right side
 				-- width = 0.3, -- Width of the window
