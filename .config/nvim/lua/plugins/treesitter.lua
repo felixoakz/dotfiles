@@ -25,6 +25,7 @@ local ensure_installed = {
 	'dockerfile',
 	'gitignore',
 	'query',
+	'regex',
 }
 
 return {
