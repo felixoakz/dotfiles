@@ -25,3 +25,6 @@ alias yay-clean='yay -Sc --noconfirm'
 alias systemctl-list-units='systemctl list-units --type=service'
 alias systemctl-list-enabled='systemctl list-unit-files --state=enabled'
 alias systemctl-list-all='systemctl list-units --all --type=service'
+
+# Ghostty OS Specific Config
+ln -sf ~/.config/ghostty/os-config/linux.conf ~/.config/ghostty/os-specific.conf
