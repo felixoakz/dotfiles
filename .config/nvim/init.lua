@@ -6,6 +6,9 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
+-- Add nvim site directory to runtimepath (required for treesitter parsers)
+vim.opt.runtimepath:prepend(vim.fn.stdpath('data') .. '/site')
+
 -- Load core modules
 require 'options'
 require 'mappings'
