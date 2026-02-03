@@ -5,11 +5,12 @@
 #
 # Structure:
 # 1. Environment Variables
-# 2. Oh My Zsh Configuration
-# 3. Completions & Integrations
-# 4. Functions & Automation
-# 5. Aliases
-# 6. External Configurations
+# 2. OS-Specific Loading
+# 3. Oh My Zsh Configuration
+# 4. Completions & Integrations
+# 5. Functions & Automation
+# 6. Global Aliases
+# 7. External Configurations
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
@@ -22,11 +23,22 @@ export LANG=en_US.UTF-8
 # Set default editor
 export EDITOR='nvim'
 
-# OpenCode Path
-export PATH="$HOME/.opencode/bin:$PATH"
+# ------------------------------------------------------------------------------
+# 2. OS-SPECIFIC LOADING
+# ------------------------------------------------------------------------------
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [[ -f ~/.zshrc_macos ]]; then
+    source ~/.zshrc_macos
+  fi
+else
+  if [[ -f ~/.zshrc_linux ]]; then
+    source ~/.zshrc_linux
+  fi
+fi
 
 # ------------------------------------------------------------------------------
-# 2. OH MY ZSH CONFIGURATION
+# 3. OH MY ZSH CONFIGURATION
 # ------------------------------------------------------------------------------
 
 # Path to Oh My Zsh installation
@@ -42,14 +54,14 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ------------------------------------------------------------------------------
-# 3. COMPLETIONS & INTEGRATIONS
+# 4. COMPLETIONS & INTEGRATIONS
 # ------------------------------------------------------------------------------
 
 # Initialize zoxide (smart cd)
 eval "$(zoxide init zsh)"
 
 # ------------------------------------------------------------------------------
-# 4. FUNCTIONS & AUTOMATION
+# 5. FUNCTIONS & AUTOMATION
 # ------------------------------------------------------------------------------
 
 # --- Tmux Auto-Start ---
@@ -78,7 +90,7 @@ fi
 dshell() { docker exec -it "$1" bash; } # Open bash in container
 
 # ------------------------------------------------------------------------------
-# 5. ALIASES
+# 6. GLOBAL ALIASES
 # ------------------------------------------------------------------------------
 
 # --- General Utilities ---
@@ -86,27 +98,6 @@ alias lg='lazygit'
 alias gg='gemini'
 alias cat='bat'
 alias count='ls -1 | wc -l'                 # Count files
-alias copy='xclip -selection clipboard <'   # Copy file content
-
-# --- Hardware & Mounts ---
-alias listusb='lsblk -S | grep -i usb'
-alias listmounts='lsblk -o NAME,SIZE,TYPE,MOUNTPOINT'
-alias trimall='sudo fstrim -av'
-
-# --- System & Package Management (Arch) ---
-alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
-alias pac-list-installed='pacman -Qe'
-
-# Cleanup
-alias pac-clean-orphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias pac-clean-cache='sudo pacman -Sc'
-alias pac-clean-all='pac-clean-cache && pac-clean-orphans'
-alias yay-clean='yay -Sc --noconfirm'
-
-# --- Systemd ---
-alias systemctl-list-units='systemctl list-units --type=service'
-alias systemctl-list-enabled='systemctl list-unit-files --state=enabled'
-alias systemctl-list-all='systemctl list-units --all --type=service'
 
 # --- Docker ---
 
@@ -134,7 +125,6 @@ alias dnetprune='docker network prune -f'        # Prune unused networks
 alias dclean='docker system prune -a --volumes'  # Aggressive prune
 
 # Mass Destruction (All)
-# Renamed from 'drcon' to 'drcon-all' to avoid conflict with single removal aliases
 alias drcon-all='docker rm -f $(docker ps -aq)'
 alias drvol-all='docker volume rm $(docker volume ls -q)'
 alias drimg-all='docker rmi -f $(docker images -q)'
@@ -147,7 +137,7 @@ alias stan='php -d memory_limit=512M ./vendor/bin/phpstan analyse --ansi'
 alias pint='php -d memory_limit=512M ./vendor/bin/pint'
 
 # ------------------------------------------------------------------------------
-# 6. EXTERNAL CONFIGURATIONS
+# 7. EXTERNAL CONFIGURATIONS
 # ------------------------------------------------------------------------------
 
 # Omarchy Extras (Aliases, Tools, ISO helpers)

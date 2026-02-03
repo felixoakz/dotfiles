@@ -1,0 +1,27 @@
+# ==============================================================================
+# LINUX SPECIFIC CONFIGURATION
+# ==============================================================================
+
+# OpenCode Path
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# --- Hardware & Mounts ---
+alias listusb='lsblk -S | grep -i usb'
+alias listmounts='lsblk -o NAME,SIZE,TYPE,MOUNTPOINT'
+alias trimall='sudo fstrim -av'
+
+# --- System & Package Management (Arch) ---
+alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
+alias pac-list-installed='pacman -Qe'
+alias copy='xclip -selection clipboard <'
+
+# Cleanup
+alias pac-clean-orphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias pac-clean-cache='sudo pacman -Sc'
+alias pac-clean-all='pac-clean-cache && pac-clean-orphans'
+alias yay-clean='yay -Sc --noconfirm'
+
+# --- Systemd ---
+alias systemctl-list-units='systemctl list-units --type=service'
+alias systemctl-list-enabled='systemctl list-unit-files --state=enabled'
+alias systemctl-list-all='systemctl list-units --all --type=service'
