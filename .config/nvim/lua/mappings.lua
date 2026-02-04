@@ -21,7 +21,7 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move to upper window' })
 -- Window Management
 map('n', '<leader>wh', '<cmd>split<cr>', { desc = 'Split horizontal' })
 map('n', '<leader>wv', '<cmd>vsplit<cr>', { desc = 'Split vertical' })
-map('n', '<leader>wd', '<cmd>close<CR>', { desc = 'Close window' })
+map('n', '<leader>wc', '<cmd>close<CR>', { desc = 'Close window' })
 
 -- Buffer Management
 map('n', '<Tab>', '<cmd>bnext<CR>', { desc = 'Next buffer' })
