@@ -8,3 +8,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 		vim.highlight.on_yank { timeout = 200 }
 	end,
 })
+
+-- Terminal settings
+vim.api.nvim_create_autocmd('TermOpen', {
+	group = vim.api.nvim_create_augroup('user_term_open', { clear = true }),
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.cmd 'startinsert'
+	end,
+})

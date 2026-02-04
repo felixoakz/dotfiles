@@ -42,4 +42,5 @@ map('n', '<leader>bn', '<cmd>enew<CR>', { silent = true, desc = 'New buffer' })
 
 -- Terminal
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-map('n', '|', '<cmd>terminal<CR>', { silent = true, desc = 'Open terminal' })
+map('n', '|', '<cmd>vsplit | terminal<CR>', { silent = true, desc = 'Open vertical terminal' })
+map('n', '_', '<cmd>split | terminal<CR>', { silent = true, desc = 'Open horizontal terminal' })
