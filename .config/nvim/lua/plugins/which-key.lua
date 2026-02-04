@@ -6,7 +6,7 @@ return {
 		opts = {
 			preset = 'modern', -- Use the modern preset for a LazyVim-like look
 			win = {
-				border = 'none',
+				border = 'single',
 				-- position = 'right', -- Show as a column on the right side
 				-- width = 0.3, -- Width of the window
 			},

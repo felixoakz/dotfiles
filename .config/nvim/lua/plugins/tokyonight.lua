@@ -27,6 +27,9 @@ return {
 					highlights.TelescopePromptTitle = { fg = '#eab308', bg = 'NONE' }
 					highlights.TelescopeResultsTitle = { fg = '#414868', bg = 'NONE' }
 					highlights.TelescopePreviewTitle = { fg = '#414868', bg = 'NONE' }
+
+					-- WhichKey Borders
+					highlights.WhichKeyBorder = { fg = '#414868', bg = 'NONE' }
 				end,
 			}
 			vim.cmd.colorscheme 'tokyonight-night'
