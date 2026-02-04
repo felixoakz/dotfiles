@@ -40,7 +40,7 @@ return {
 
 					-- Keymaps
 					map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-					map('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
+					map('gr', '<cmd>Trouble lsp_references toggle focus=true<cr>', '[G]oto [R]eferences')
 					map('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
 					map('<leader>ct', vim.lsp.buf.type_definition, '[t]ype definition')
 					map('<leader>cr', vim.lsp.buf.rename, '[r]ename variable')

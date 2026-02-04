@@ -50,7 +50,6 @@ return {
 			vim.keymap.set('n', '<leader>sl', builtin.resume, { desc = 'Last search' })
 			vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Current word' })
 			vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Active keymaps' })
-			vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Diagnostics' })
 			vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Buffer List' })
 			vim.keymap.set('n', '<leader>sT', builtin.builtin, { desc = 'List Telescope commands' })
 			vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Help tags' })

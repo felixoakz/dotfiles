@@ -4,7 +4,6 @@ local map = vim.keymap.set
 -- General
 map('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true, desc = 'Clear search highlight' })
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode' })
-map('n', '<leader>r', ':e<CR>', { desc = 'Reload file' })
 
 map('n', '<leader>P', function()
 	vim.fn.setreg('+', vim.fn.fnamemodify(vim.fn.expand '%', ':~:.'))
@@ -12,13 +11,6 @@ end, { desc = 'Copy relative path' })
 
 -- Diagnostics
 map('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice message' })
-
--- Navigation
--- Disable arrow keys in normal mode to enforce using hjkl
-map('n', '<left>', '<cmd>echo "Use h to move!"<CR>')
-map('n', '<right>', '<cmd>echo "Use l to move!"<CR>')
-map('n', '<up>', '<cmd>echo "Use k to move!"<CR>')
-map('n', '<down>', '<cmd>echo "Use j to move!"<CR>')
 
 -- Window Navigation
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move to left window' })
