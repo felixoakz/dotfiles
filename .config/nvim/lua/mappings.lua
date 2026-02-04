@@ -11,7 +11,6 @@ map('n', '<leader>cp', function()
 end, { desc = 'Copy relative path' })
 
 -- Diagnostics
-map('n', '<leader>cd', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 map('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice message' })
 
 -- Navigation
