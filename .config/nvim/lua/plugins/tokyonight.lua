@@ -12,7 +12,11 @@ return {
 					floats = 'transparent',
 				},
 				on_colors = function(colors) end,
-				on_highlights = function(highlights, colors) end,
+				on_highlights = function(highlights, colors)
+					highlights.WinSeparator = { fg = '#414868', bg = '#1a1b26' }
+					highlights.StatusLine = { bg = '#1a1b26' }
+					highlights.StatusLineNC = { bg = '#1a1b26' }
+				end,
 			}
 			vim.cmd.colorscheme 'tokyonight-night'
 		end,
