@@ -6,7 +6,7 @@ map('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true, desc = 'Clear search h
 map('i', 'jk', '<ESC>', { desc = 'Exit insert mode' })
 map('n', '<leader>r', ':e<CR>', { desc = 'Reload file' })
 
-map('n', '<leader>cp', function()
+map('n', '<leader>P', function()
 	vim.fn.setreg('+', vim.fn.fnamemodify(vim.fn.expand '%', ':~:.'))
 end, { desc = 'Copy relative path' })
 

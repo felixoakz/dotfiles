@@ -9,22 +9,22 @@ return {
 		},
 		keys = {
 			{
-				'<leader>tt',
+				'<leader>tT',
 				'<cmd>Trouble diagnostics toggle<cr>',
 				desc = 'Diagnostics (Trouble)',
 			},
 			{
-				'<leader>tT',
+				'<leader>tt',
 				'<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
 				desc = 'Buffer Diagnostics (Trouble)',
 			},
 			{
-				'<leader>cs',
+				'<leader>ts',
 				'<cmd>Trouble symbols toggle focus=false<cr>',
 				desc = 'Symbols (Trouble)',
 			},
 			{
-				'<leader>cl',
+				'<leader>tr',
 				'<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
 				desc = 'LSP Definitions / references / ... (Trouble)',
 			},
