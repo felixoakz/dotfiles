@@ -15,6 +15,7 @@ return {
 			spec = {
 				{ '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
 				{ '<leader>b', group = '[B]uffer' },
+				{ '<leader>w', group = '[W]indow' },
 				{ '<leader>s', group = '[S]earch' },
 				{ '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
 				{ '<leader>m', desc = 'Treesj Toggle' },
