@@ -61,10 +61,23 @@ map('n', '_', function()
 	end)
 end, { desc = 'Open named horizontal terminal' })
 
-map('n', '<leader>tn', function()
+map('n', '+', function()
 	vim.ui.input({ prompt = 'Terminal Name: ' }, function(input)
+		vim.cmd 'terminal'
 		if input and #input > 0 then
 			vim.api.nvim_buf_set_name(0, 'term://' .. input)
 		end
 	end)
-end, { desc = 'Rename terminal buffer' })
+end, { desc = 'Open named terminal' })
+
+map('n', '<leader>br', function()
+	vim.ui.input({ prompt = 'New Buffer Name: ' }, function(input)
+		if input and #input > 0 then
+			if vim.bo.buftype == 'terminal' then
+				vim.api.nvim_buf_set_name(0, 'term://' .. input)
+			else
+				vim.api.nvim_buf_set_name(0, input)
+			end
+		end
+	end)
+end, { desc = 'Rename buffer/terminal' })
