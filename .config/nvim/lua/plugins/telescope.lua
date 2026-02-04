@@ -21,7 +21,19 @@ return {
 		config = function()
 			require('telescope').setup {
 				defaults = {
-					-- Your default mappings / updates / etc.
+					sorting_strategy = 'ascending',
+					layout_config = {
+						horizontal = {
+							prompt_position = 'top',
+							preview_width = 0.6,
+						},
+						vertical = {
+							mirror = false,
+						},
+						width = 0.8,
+						height = 0.80,
+						preview_cutoff = 120,
+					},
 				},
 				extensions = {
 					['ui-select'] = {
