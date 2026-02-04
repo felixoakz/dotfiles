@@ -13,7 +13,7 @@ return {
 		config = function(_, opts)
 			require('todo-comments').setup(opts)
 			vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<cr>', { desc = 'TODO comments' })
-			vim.keymap.set('n', '<leader>xt', '<cmd>TodoTrouble<cr>', { desc = 'Todo (Trouble)' })
+			vim.keymap.set('n', '<leader>to', '<cmd>TodoTrouble<cr>', { desc = 'Todo (Trouble)' })
 		end,
 	},
 }
