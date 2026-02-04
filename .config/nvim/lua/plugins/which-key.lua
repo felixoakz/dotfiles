@@ -17,6 +17,7 @@ return {
 				{ '<leader>b', group = '[B]uffer' },
 				{ '<leader>w', group = '[W]indow' },
 				{ '<leader>s', group = '[S]earch' },
+				{ '<leader>t', group = '[T]rouble' },
 				{ '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
 				{ '<leader>m', desc = 'Treesj Toggle' },
 				{ ']', group = 'Next' },
