@@ -42,5 +42,29 @@ map('n', '<leader>bn', '<cmd>enew<CR>', { silent = true, desc = 'New buffer' })
 
 -- Terminal
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-map('n', '|', '<cmd>vsplit | terminal<CR>', { silent = true, desc = 'Open vertical terminal' })
-map('n', '_', '<cmd>split | terminal<CR>', { silent = true, desc = 'Open horizontal terminal' })
+
+map('n', '|', function()
+	vim.ui.input({ prompt = 'Terminal Name: ' }, function(input)
+		vim.cmd 'vsplit | terminal'
+		if input and #input > 0 then
+			vim.api.nvim_buf_set_name(0, 'term://' .. input)
+		end
+	end)
+end, { desc = 'Open named vertical terminal' })
+
+map('n', '_', function()
+	vim.ui.input({ prompt = 'Terminal Name: ' }, function(input)
+		vim.cmd 'split | terminal'
+		if input and #input > 0 then
+			vim.api.nvim_buf_set_name(0, 'term://' .. input)
+		end
+	end)
+end, { desc = 'Open named horizontal terminal' })
+
+map('n', '<leader>tn', function()
+	vim.ui.input({ prompt = 'Terminal Name: ' }, function(input)
+		if input and #input > 0 then
+			vim.api.nvim_buf_set_name(0, 'term://' .. input)
+		end
+	end)
+end, { desc = 'Rename terminal buffer' })
