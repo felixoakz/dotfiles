@@ -27,11 +27,15 @@ export EDITOR='nvim'
 # 2. OS-SPECIFIC LOADING
 # ------------------------------------------------------------------------------
 
+# Create ghostty OS-specific config symlink
+GHOSTTY_DIR="$HOME/.config/ghostty"
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  ln -sf "$GHOSTTY_DIR/os-config/macos.conf" "$GHOSTTY_DIR/os-specific.conf"
   if [[ -f ~/.zshrc_macos ]]; then
     source ~/.zshrc_macos
   fi
 else
+  ln -sf "$GHOSTTY_DIR/os-config/linux.conf" "$GHOSTTY_DIR/os-specific.conf"
   if [[ -f ~/.zshrc_linux ]]; then
     source ~/.zshrc_linux
   fi

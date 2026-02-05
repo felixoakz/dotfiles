@@ -1,0 +1,2 @@
+# Ghostty OS-specific symlink (dynamically created by zshrc)
+.config/ghostty/os-specific.conf
