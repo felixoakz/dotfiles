@@ -15,6 +15,11 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/tools/bin:$PATH"
 
+# --- EAS CLI (Expo Application Services) ---
+# EAS CLI initialization for Expo projects
+export EAS_CLI_HOME="$HOME/.eas"
+mkdir -p "$EAS_CLI_HOME"
+
 # Aliases
 alias copy='pbcopy <'
 alias update='brew update && brew upgrade'
