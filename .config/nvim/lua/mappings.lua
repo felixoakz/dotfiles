@@ -43,20 +43,10 @@ map('n', '<leader>bn', '<cmd>enew<CR>', { silent = true, desc = 'New buffer' })
 -- Terminal
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
-local function open_named_terminal(cmd, desc)
-	return function()
-		vim.ui.input({ prompt = 'Terminal Name: ' }, function(input)
-			vim.cmd(cmd)
-			if input and #input > 0 then
-				vim.api.nvim_buf_set_name(0, input .. '//zsh')
-			end
-		end)
-	end
-end
-
-map('n', '|', open_named_terminal('vsplit | terminal', 'Open named vertical terminal'))
-map('n', '_', open_named_terminal('split | terminal', 'Open named horizontal terminal'))
-map('n', '+', open_named_terminal('terminal', 'Open named terminal'))
+-- Open unnamed terminals directly
+map('n', '|', '<cmd>vsplit | terminal<cr>', { desc = 'Open vertical terminal' })
+map('n', '_', '<cmd>split | terminal<cr>', { desc = 'Open horizontal terminal' })
+map('n', '+', '<cmd>terminal<cr>', { desc = 'Open terminal' })
 
 map('n', '<leader>br', function()
 	vim.ui.input({ prompt = 'New Buffer Name: ' }, function(input)
