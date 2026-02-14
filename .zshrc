@@ -99,7 +99,7 @@ dshell() { docker exec -it "$1" bash; } # Open bash in container
 
 # --- General Utilities ---
 alias lg='lazygit'
-alias gg='gemini'
+alias y='yazi'
 alias cat='bat'
 alias count='ls -1 | wc -l'                 # Count files
 
