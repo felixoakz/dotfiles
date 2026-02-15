@@ -1,0 +1,40 @@
+{
+  //from dotfiles
+
+  "autoupdate": false,
+
+  "$schema": "https://opencode.ai/config.json",
+
+  "mcp": {
+
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-185575d7-4770-4e69-8eb7-ea085205466e"
+      },
+      "enabled": true
+    }
+
+    "laradumps": {
+      "url": "http://127.0.0.1:3000/sse",
+      "type": "remote"
+    },
+
+  },
+
+  // ATHROPIC PLUGIN
+  "plugin": ["opencode-anthropic-auth@latest"],
+  "mode": {
+      "build": {
+          "prompt": "You are Claude Code, Anthropic's official CLI for Claude."
+      },
+      "plan": {
+          "prompt": "You are Claude Code, Anthropic's official CLI for Claude."
+      }
+  },
+
+
+  // GOOGLE GEMINI PLUGIN
+  "plugin": ["opencode-gemini-auth@latest"],
+}
