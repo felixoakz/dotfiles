@@ -14,7 +14,7 @@
         "CONTEXT7_API_KEY": "ctx7sk-185575d7-4770-4e69-8eb7-ea085205466e"
       },
       "enabled": true
-    }
+    },
 
     "laradumps": {
       "url": "http://127.0.0.1:3000/sse",
